@@ -1,4 +1,6 @@
 # Salary Prediction 
+<img width="1127" height="585" alt="salary-prediction" src="https://github.com/user-attachments/assets/b8a1a88c-5d4d-459c-8c95-a7abd66a0b38" />
+
 
 This repository contains a small salary prediction project with three main artifacts:
 
