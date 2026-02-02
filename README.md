@@ -1,4 +1,4 @@
-# Salary Prediction — Notebook, Model, and App
+# Salary Prediction 
 
 This repository contains a small salary prediction project with three main artifacts:
 
