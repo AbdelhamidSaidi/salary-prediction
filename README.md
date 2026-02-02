@@ -38,14 +38,14 @@ Setup and Dependencies
 - Minimal packages required (install into the venv):
 
 ```powershell
-& "C:/Users/azerty/Documents/salary prediction/.venv/Scripts/python.exe" -m pip install -U pip
-& "C:/Users/azerty/Documents/salary prediction/.venv/Scripts/python.exe" -m pip install -r requirements.txt
+/salary prediction/.venv/Scripts/python.exe" -m pip install -U pip
+/salary prediction/.venv/Scripts/python.exe" -m pip install -r requirements.txt
 ```
 
 If you don't have a `requirements.txt`, you can install the minimal set used in the project:
 
 ```powershell
-& "C:/Users/azerty/Documents/salary prediction/.venv/Scripts/python.exe" -m pip install pandas scikit-learn joblib openpyxl streamlit
+/salary prediction/.venv/Scripts/python.exe" -m pip install pandas scikit-learn joblib openpyxl streamlit
 ```
 
 Notebook-specific tips
@@ -79,13 +79,6 @@ model = LinearRegression()
 model.fit(X_train, y_train)
 joblib.dump(model, 'salary_model.pkl')
 ```
-
-Contact / Next steps
-
-- If you want, I can:
-  - Generate a `requirements.txt` from the current venv,
-  - Add instructions to run the notebook within VS Code or GitHub Codespaces,
-  - Add sample test inputs and expected outputs for the app.
 
 ---
 
