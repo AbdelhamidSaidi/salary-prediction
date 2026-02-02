@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Salary Prediction</title>
+  </head>
+  <body>
+    <h1>Salary Prediction (Vercel)</h1>
+    <label>Years of experience: <input id="years" type="number" step="0.1" value="1"/></label><br/>
+    <label>Job rate (per hour): <input id="jobrate" type="number" step="0.1" value="10"/></label><br/>
+    <button id="go">Predict</button>
+    <p id="result"></p>
+
+    <script>
+      async function predict(){
+        const years = parseFloat(document.getElementById('years').value);
+        const jobrate = parseFloat(document.getElementById('jobrate').value);
+        const res = await fetch('/api/predict', {
+          method: 'POST',
+          headers: {'Content-Type':'application/json'},
+          body: JSON.stringify({years, jobrate})
+        });
+        if(!res.ok){
+          document.getElementById('result').innerText = 'Error: ' + res.status + ' ' + res.statusText;
+          return;
+        }
+        const j = await res.json();
+        document.getElementById('result').innerText = 'Estimated salary: ' + j.prediction.toFixed(2) + ' (year)';
+      }
+      document.getElementById('go').addEventListener('click', predict);
+    </script>
+  </body>
+</html>
